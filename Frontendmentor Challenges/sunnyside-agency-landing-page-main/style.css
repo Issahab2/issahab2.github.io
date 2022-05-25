@@ -85,8 +85,8 @@ header {
     background-image: url(images/desktop/image-header.jpg);
     min-height: 100vh;
     background-position: bottom;
-    background-size: contain;
-    /* background-repeat: no-repeat; */
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 header nav {
