@@ -1,0 +1,564 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap');
+
+:root {
+
+    /* Primary Colors */
+
+    --soft-red: hsl(7, 99%, 70%);
+    --yellow: hsl(51, 100%, 49%);
+    --dark-desaturated-cyan: hsl(167, 62%, 26%);/* Graphic design text */
+    --dark-moderate-cyan: hsl(168, 34%, 41%); /* Footer */
+
+    /* Neutral Colors */
+
+    --very-dark-desaturated-blue: hsl(212, 27%, 19%);
+    --very-dark-grayish-blue: hsl(232, 10%, 55%);
+    --dark-grayish-blue: hsl(210, 4%, 67%);
+    --white: hsl(0, 0%, 100%);
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    overflow-x: hidden;
+    font-family: "Barlow", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, .contact{
+    font-family: "Fraunces", sans-serif;
+}
+
+.hidden-mobile {
+    display: flex;
+}
+
+.hidden-desktop {
+    display: none;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-col{
+    display: flex;
+    flex-direction: column;
+}
+
+.block {
+    display: block;
+}
+
+.none {
+    display: none;
+}
+
+/* Animations */
+
+@keyframes canvas {
+    0% {top: -20%; opacity: 0;}
+    50% {top: 0%; opacity: 0.7;}
+    100% {top: 20%; opacity: 1;}
+}
+
+@keyframes fade-in {
+    0% {opacity: 0.1;}
+    50% {opacity: 0.7;}
+    100% {opacity: 1;}
+}
+
+/* Header */
+
+header {
+    background-image: url(images/desktop/image-header.jpg);
+    min-height: 100vh;
+    background-position: bottom;
+    background-size: contain;
+    /* background-repeat: no-repeat; */
+}
+
+header nav {
+    padding: 2rem;
+    justify-content: space-between;
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav ul a {
+    text-decoration: none;
+    margin-inline: 1em;
+    color: var(--white);
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+header nav ul a:hover{
+    color: var(--very-dark-desaturated-blue);
+}
+
+header nav ul .contact {
+    background-color: var(--white);
+    color: var(--very-dark-desaturated-blue);
+    padding: 1rem 2rem;
+    border-radius: 3rem;
+    transition: 0.3s ease;
+}
+
+header nav ul .contact:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+    color: var(--white);
+}
+
+header h1 {
+    color: var(--white);
+    width: 100%;
+    text-align: center;
+    font-size: 5vw;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    font-weight: 900;
+    letter-spacing: 10px;
+    animation-name: fade-in;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+}
+
+header .hero svg {
+    width: 100%;
+    position: relative;
+    font-size: 2vw;
+    left: 48vw;
+    animation-name: fade-in;
+    animation-duration: 0.8s;
+    animation-timing-function: linear;
+}
+
+header .hero .scroll-down {
+    height: 130px;
+    width: 50px;
+    position: relative;
+    top: -17vh;
+    left: 47.5vw;
+    cursor: pointer;
+}
+
+.left{
+    width: 50%;
+}
+
+.right{
+    width: 50%;
+}
+
+/* First Section */
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-inline: 7rem;
+}
+
+.card h2 {
+    font-weight: 900;
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    color: var(--very-dark-desaturated-blue);
+}
+
+.card p {
+    color: var(--very-dark-grayish-blue);
+    margin-bottom: 3rem;
+}
+
+.card a{
+    text-decoration: none;
+    font-family: "Fraunces",sans-serif;
+    color: var(--very-dark-desaturated-blue);
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+}
+
+.card a .line {
+    width: 150px;
+    height: 10px;
+    background-color:   var(--yellow);
+    opacity: 0.2;
+    border-radius: 5rem;
+    position: relative;
+    top: 25px;
+    left: -12px;
+    z-index: 1;
+    transition: 0.3s ease;
+}
+
+.card a:hover .line{
+    opacity: 0.3;
+    filter: brightness(150%);
+}
+
+.first-sec .right img{
+    width: 100%;
+}
+
+/* Second Section */
+
+.second-sec .left img{
+    width: 100%;
+}
+
+.second-sec .card a .line {
+    background-color: var(--soft-red);
+}
+
+.second-sec .card a:hover .line {
+    opacity: 0.5;
+}
+
+/* Third Section */
+
+.third-sec .left{
+    background-image: url(images/desktop/image-graphic-design.jpg);
+}
+
+.third-sec .left h2{
+    color: var(--dark-desaturated-cyan);
+    filter: brightness(70%);
+}
+
+.third-sec .left p{
+    color: var(--dark-desaturated-cyan);
+}
+
+.third-sec .right h2{
+    color: var(--very-dark-desaturated-blue);
+}
+.third-sec .right p{
+    color: var(--very-dark-desaturated-blue);
+    filter: brightness(130%);
+}
+
+.third-sec .design{
+    height: 633px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.third-sec .design h2{
+    font-weight: 900;
+}
+
+.third-sec .design p{
+    width: 50%;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+}
+
+.third-sec .right {
+    background-image: url(images/desktop/image-photography.jpg);
+}
+
+/* Fourth Section or Clients */
+
+.fourth-sec{
+    flex-direction: column;
+    padding: 5rem;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.fourth-sec h2{
+    margin-bottom: 5rem;
+    letter-spacing: 10px;
+    color: var(--dark-grayish-blue);
+}
+
+.team{
+    gap: 4rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.client{
+    width: 25%;
+}
+
+.client img{
+    width: 30%;
+    border-radius: 50%;
+    align-self: center;
+    margin-bottom: 4rem;
+}
+
+.client p{
+    text-align: center;
+    color: var(--very-dark-grayish-blue);
+}
+
+.client h3{
+    margin-top: 5rem;
+    text-align: center;
+    color: var(--very-dark-desaturated-blue);
+}
+
+.client span{
+    text-align: center;
+    margin: 1em auto 7rem auto;
+    display: flex;
+    justify-content: center;
+    color: var(--dark-grayish-blue);
+}
+
+/* Fifth Section */
+
+.fifth-sec img{
+    width: 25%;
+}
+
+/* Footer */
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--dark-moderate-cyan);
+    filter: brightness(150%);
+    height: 350px;
+}
+
+footer h2{
+    font-weight: 900;
+    font-size: 2.5rem;
+    font-family: sans-serif;
+    color: var(--dark-desaturated-cyan);
+    filter: brightness(70%);
+    margin: 3rem auto 2rem auto;
+}
+
+footer ul{
+    list-style-type: none;
+}
+
+footer nav{
+    margin-bottom: 6rem;
+}
+
+footer ul a{
+    text-decoration: none;
+    filter: brightness(80%);
+    color: var(--dark-desaturated-cyan);
+    margin-inline: 3rem;
+    transition: 0.3s ease;
+}
+
+footer ul a:hover{
+    color: var(--white);
+}
+
+footer .social-icons svg{
+    margin-inline: 1rem;
+    filter: brightness(70%);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+footer .social-icons svg:hover{
+    filter: brightness(2000%);
+}
+
+/* Mobile Design */
+
+@media (max-width:700px) {
+    .hidden-mobile {
+        display: none;
+    }
+    
+    .hidden-desktop {
+        display: flex;
+    }
+
+    header {
+        min-height: 80vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    header .close-canvas{
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+    }
+
+    header .hamburger {
+        cursor: pointer;
+        z-index: 2;
+    }
+
+    .canvas {
+        position: absolute;
+        background-color: var(--white);
+        width: 80%;
+        z-index: 3;
+        top: 20%;
+        right: 10%;
+        left: 10%;
+        animation-name: canvas;
+        animation-duration: 0.3s;
+        animation-timing-function: linear;
+    }
+    .triangle{
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        background-color: var(--white);
+        clip-path: polygon(100% 0, 100% 100%, 0 100%);
+        right: -0.5px;
+        top: -39.5px;
+    }
+    .canvas ul{
+        width: 100%;
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .canvas ul a{
+        display: block;
+        text-decoration: none;
+        color: var(--dark-grayish-blue);
+        filter: brightness(80%);
+        margin-top: 2em;
+        font-size: 20px;
+    }
+
+    .canvas ul .contact{
+        background-color: var(--yellow);
+        margin-bottom: 2rem;
+        filter: brightness(100%);
+    }
+
+    .canvas ul .contact:hover{
+        color: var(--very-dark-desaturated-blue);
+        background-color: hsl(39, 100%, 50%);
+    }
+    
+    header h1{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        font-size: 5vh;
+        pointer-events: none;
+    }
+    
+    header .hero svg{
+        left: 45vw;
+    }
+    
+    .first-sec, .second-sec, .third-sec, .fourth-sec{
+        flex-direction: column;
+    }
+
+    .first-sec{
+        flex-direction: column-reverse;
+    }
+    
+    .left, .right{
+        width: 100%;
+    }
+    
+    .card {
+        padding: 4rem 2rem;
+        text-align: center;
+    }
+    
+    .card h2{
+        font-size: 3rem;
+    }
+    
+    .card p{
+        font-size: 20px;
+    }
+    
+    .card a {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card a .line{
+        left: 0px;
+    }
+    
+    .third-sec .design{
+        min-height: 100vh;
+        background-position: center;
+        background-size: cover;
+    }
+    
+    .third-sec .design h2{
+        font-size: 40px;
+    }
+
+    .third-sec .design p{
+        width: 90%;
+        font-size: 25px;
+    }
+
+    .fourth-sec{
+        padding: 5rem 1rem;
+    }
+
+    .fourth-sec h2{
+        font-size: 1rem;
+        letter-spacing: 3px;
+    }
+
+    .fourth-sec .team{
+        flex-direction: column;
+    }
+
+    .client{
+        width: 90%;
+    }
+
+    .client-name h3{
+        margin-top: 2rem;
+    }
+
+    .client-name span{
+        margin-bottom: 0;
+    }
+
+    .fifth-sec{
+        flex-wrap: wrap;
+    }
+
+    .fifth-sec img{
+        width: 50%;
+    }
+
+    
+
+}
