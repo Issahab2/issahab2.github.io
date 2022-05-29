@@ -121,6 +121,7 @@ header .mobile-menu{
 header .menu nav ul li .features {
     position: absolute;
     margin-top: 1em;
+    padding:1em;
     height: 100px;
     left: 100px;
     animation-name: dropdown;
