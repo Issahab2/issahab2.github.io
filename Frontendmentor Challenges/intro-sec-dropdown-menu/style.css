@@ -111,7 +111,6 @@ header nav ul {
 header nav ul a {
     text-decoration: none;
     color: var(--Medium-Gray);
-    padding: 0.5rem;
 }
 
 header .mobile-menu{
@@ -121,8 +120,8 @@ header .mobile-menu{
 header .menu nav ul li .features {
     position: absolute;
     margin-top: 1em;
-    padding:1em;
     height: 100px;
+    padding: 0.5rem;
     left: 100px;
     animation-name: dropdown;
     animation-timing-function: linear;
